@@ -1,0 +1,58 @@
+body {
+    background-image: url(../images/bar.jpg);
+    height: 100%;
+    cursor:url(myBall.cur),auto;
+    background-repeat: no-repeat;
+}
+.jumbotron-fluid {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    margin-bottom: 5%;
+}
+.Header {
+    text-align: center;
+}
+#minor-header {
+    text-align: center;
+}
+.content-holder {
+    margin-top:10px;
+    max-height: 400px;
+    border: 2px;
+    border-color: gray;
+    border-style: solid;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.8);
+}
+#map {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+#search-container {
+    margin-top: 8px;
+}
+#location-button {
+    width: 276px;
+}
+#search-field {
+   width: 100px;
+}
+#search-bar {
+    text-align: center;
+    margin-bottom: 10px;
+}
+#button-opacity {
+    background: rgba(255, 255, 255, 0.8);
+}
+#res-info-header {
+    text-align: center;
+}
+.footer {
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+        position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+  }
