@@ -1,24 +1,4 @@
 
-// Matt information
-
-var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-        $('#startDate').datepicker({
-            uiLibrary: 'bootstrap4',
-            iconsLibrary: 'fontawesome',
-            minDate: today,
-            maxDate: function () {
-                return $('#endDate').val();
-            }
-        });
-        $('#endDate').datepicker({
-            uiLibrary: 'bootstrap4',
-            iconsLibrary: 'fontawesome',
-            minDate: function () {
-                return $('#startDate').val();
-            }
-        });
-
-
 // Philip
 $( document ).ready(function() {
 
@@ -55,7 +35,6 @@ $( document ).ready(function() {
         }
     }
     
-    // $("button").on("click", 
     function beginSearch() {
        //function call on var zomato init function with input of key value
         Zomato.init({
@@ -68,7 +47,6 @@ $( document ).ready(function() {
             searchRes = searchResponse;
             makeArray();
         });
-        // });
     };
     // declare object Zomato with functions as internal objects
     var Zomato = {
@@ -176,8 +154,6 @@ $( document ).ready(function() {
     
     function mapCenter() {
         // centers map to myLocation
-        console.log(myLocation.lat);
-        console.log(myLocation.lon);
         var map = L.map('map',{ center: [myLocation.lat, myLocation.lon], zoom: 14});
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
         var myLocationFlag = L.marker([myLocation.lat, myLocation.lon]).addTo(map);
