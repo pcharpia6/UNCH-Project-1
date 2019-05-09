@@ -2,16 +2,16 @@
 // Philip
 $( document ).ready(function() {
 
-    // declare these five variables with no value
+    // declare these variables with no value
     
     // declare u with beginning of URL... will be added to later for differet functions
     var u = "https://developers.zomato.com/api/";
     var zheader, version, url, myLocation, searchRes, newRestaurant;
     var restaurants = [];
     
-    function makeArray() { // place a callback to the map point creation function inputting the value of the array objects
+    function makeArray() { 
         console.log("searchresponse is: ", searchRes);
-        for (var i=0; i<=8; i++) {
+        for (var i=0; i<=10; i++) {
             newRestaurant = {
             restName: searchRes.restaurants[i].restaurant.name,
             restCuis: searchRes.restaurants[i].restaurant.cuisines,
@@ -68,7 +68,7 @@ $( document ).ready(function() {
                         lat: coords.myLocation.lat,
                         lon: coords.myLocation.lon,
                         radius: 16000,
-                        count: 9,
+                        count: 20,
                         sort: "real_distance"
                     },
                     success: function(response) {
