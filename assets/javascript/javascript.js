@@ -2,16 +2,14 @@
 // Philip
 $( document ).ready(function() {
 
-    // declare these variables with no value
     
-    // declare u with beginning of URL... will be added to later for differet functions
+    // declare u with beginning of URL... will append to later for different functions
     var u = "https://developers.zomato.com/api/";
     var zheader, version, url, myLocation, searchRes, newRestaurant;
     var restaurants = [];
     
     function makeArray() { 
-        console.log("searchresponse is: ", searchRes);
-        for (var i=0; i<=10; i++) {
+        for (var i=0; i<=18; i++) {
             newRestaurant = {
             restName: searchRes.restaurants[i].restaurant.name,
             restCuis: searchRes.restaurants[i].restaurant.cuisines,
@@ -32,6 +30,7 @@ $( document ).ready(function() {
             newDiv.append($("<a href="+restaurants[i].restUrl+" target='_blank'>").text("Visit Website"));
             newDiv.append($("<p>   <p>"));
             $("#restaurants").append(newDiv);
+            console.log(newDiv);
         }
     }
     
@@ -137,7 +136,8 @@ $( document ).ready(function() {
     function geoSuccess(position) {
         myLocation = {
             lat: position.coords.latitude,
-            lon: position.coords.longitude}
+            lon: position.coords.longitude
+        }
         logMyLocation();
     };
     // prevents attempting to run the search function without having returned the location data
